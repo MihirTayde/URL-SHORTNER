@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URL Shortener</title>
+  </head>
+  <body>
+    <h1>Submit Data to API</h1>
+    <form action="/shorten" method="POST">
+      <label for="Long_URL">URL:</label>
+      <input type="text" id="Long_URL" name="Long_URL" required />
+      <button type="submit">Submit</button>
+    </form>
+
+    <% if (shortURL) { %>
+      <h2>Your shortened URL:</h2>
+      <a href="<%= shortURL %>"><%= shortURL %></a>
+    <% } %>
+  </body>
+</html>
